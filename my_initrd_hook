@@ -1,0 +1,21 @@
+#!/bin/sh
+
+PREREQ=""
+
+prereqs() {
+    echo "$PREREQ"
+}
+
+case "$1" in
+    prereqs)
+        prereqs
+        exit 0
+        ;;
+esac
+
+. "${CONFDIR}/initramfs.conf"
+. /usr/share/initramfs-tools/hook-functions
+
+if [ -x /root/cryptroot.sh ]; then
+    cp /root/cryptroot.sh ${DESTDIR}/root/
+fi
