@@ -1,7 +1,7 @@
 # initrd-utils
 Tools and Utilities for Initial Ramdisk
 
-## Script to decrypt a root partition from initrd
+## Script to decrypt a root partition from the initrd shell
 
 Supports the following OS:
    1. Debian 6.x or higher
